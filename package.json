@@ -18,6 +18,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "homepage": "https://sean-netflix.netlify.app",
   "eslintConfig": {
     "extends": [
       "react-app",
