@@ -1,7 +1,8 @@
+import styled from 'styled-components'
 import logo from "./logo.jpg";
 import './App.css';
 import background from "./background.jpg";
-import React from 'react';
+import React, { useState } from 'react';
 import popcorn from "./papcorn.png"
 import kid from "./kid.png"
 import tv from "./tv.png"
@@ -11,14 +12,41 @@ import devices from "./video-devices.m4v"
 import offline from "./offline.jpg"
 import boxshot from "./boxshot.png"
 
+
 function App() { 
+
+  let [modal,setModal] = useState(false);
+  const [show,setShow] = useState(false);
+
+  let scroll = document.querySelectorAll("#a");
+  let a = document.getElementById("a");
+  const 박스 = styled.button`
+          color : white;
+      `
+  window.addEventListener("scroll" , function(){
+    let value = window.scrollY;
+    if (value > 220) {
+      const 박스 = styled.button`
+          color : white;
+      `
+    }
+    else if (value > 750) {
+     
+    }
+    else if (value > 1300) {
+     
+    }
+    else if (value > 1900) {
+     
+    }
+  });
   return (
    <content className="content">
     <div className="top-content">
     <div className="top-shader">
     <div className="header">
     <img className="logo"src={logo}></img>
-    <a className="login">로그인</a>
+    <a className="login">Sign In</a>
     </div>
     <div className="top-content-rab">
     <div className="vanner">
@@ -51,7 +79,7 @@ function App() {
       <div className="rab">
       <div className="tv">
        <div className="left-tv">
-        <h2 className="text-h2">Enjoy on your TV</h2>
+        <박스>Enjoy on your TV</박스>
         <p className="text-p">Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
         </div>
         <div className="right-tv">
@@ -113,7 +141,18 @@ function App() {
      <div className="bottom-rab">
       <h2 className="text-h2-bottom">Frequently Asked Questions</h2>
       <ul className="ul">
-        <li className="ul-li">What can I watch on Netflix?</li>
+        <li onClick={()=>{setShow(!show)}} className={show ? 'ul-li-changed' : "ul-li"}>What can I watch on Netflix?
+        <span onClick={()=>{setShow(!show)}} className={show ? 'rotate-yes' : 'rotate-no'}>+</span>
+        </li> 
+         <div onClick={()=>{setShow(!show)}} className={show ? 'b' : "c"}>
+          <p onClick={()=>{setShow(!show)}} className={show ? 'showHidden' : "hide"}>
+          Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.
+          <br />
+          <br />
+          <a className="link1" href="">Check out some of our content</a>
+          </p>
+         </div>
+        
         <li className="ul-li">What is Netflix?</li>
         <li className="ul-li">How much does Netflix cost?</li>
         <li className="ul-li">Where can I watch?</li>

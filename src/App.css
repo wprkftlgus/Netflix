@@ -46,11 +46,6 @@ body{
   animation-fill-mode: forwards;
 }
 
-#world{
-  color: white;
-  height: 20px;
-}
-
 .content{
   margin: auto;
 }
@@ -203,13 +198,36 @@ body{
   object-fit: fill;
   height: 100%;
 }
+#a{
+
+}
 .text-h2{
   font-size: 3rem;
   font-weight: 900;
+  animation: appear 2s;
+}
+@keyframes appear{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
 }
 .text-p{
   font-size: 1.5rem;
   font-weight: 400;
+  animation: slide 2s;
+}
+@keyframes slide{
+  from{
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to{
+    opacity: 1;
+    transform: none;
+  }
 }
 .device {
   margin: 0 2rem;
@@ -364,17 +382,80 @@ body{
   font-size: 3rem;
   font-weight: 900;
 }
+.ul-li-changed {
+  background-color: rgb(48, 48, 48);
+  padding: 0.8em 2.2em 0.8em 1.2em;
+  margin: 0 0 0.1rem 0;
+  cursor: pointer;
+  justify-content: space-between;
+  display: flex;
+  user-select:none;
+}
+.ul-li-changed:hover{
+  animation: button 0.4s;
+  animation-fill-mode: forwards;
+
+}
+.rotate-yes{
+  transform: rotate(45deg);
+  transition: all 0.4s;
+}
+.rotate-no{
+  transform: rotate(0deg);
+  transition: all 0.4s;
+}
+.hide{
+  background-color: rgb(48, 48, 48);
+  padding: 0.8em 2.2em 0.8em 1.2em;
+  margin: 0 0 0.5rem 0;
+  justify-content: space-between;
+  display: none;
+  max-height: 0px;
+}
+.showHidden{
+  background-color: rgb(48, 48, 48);
+  padding: 0.8em 2.2em 0.8em 1.2em;
+  margin: 0 0 0.5rem 0;
+  justify-content: space-between;
+  display: inline-block;
+  max-height: 500px;
+}
+.b{
+  max-height: 500px;
+  transition: All 2s ;
+}
+.c{
+  max-height: 0px;
+  
+}
+.link1{
+  color: rgb(255, 255, 255);
+  border-radius: 0.125rem;
+}
 .ul{
   list-style: none;
   margin: 2em auto;
   max-width: 815px;
   font-size: 1.5rem;
+  
+}
+.ul-li-changed{
+  background-color: rgb(48, 48, 48);
+  padding: 0.8em 2.2em 0.8em 1.2em;
+  margin: 0 0 0.5rem 0;
+  cursor: pointer;
+  justify-content: space-between;
+  display: flex;
+  
 }
 .ul-li{
   background-color: rgb(48, 48, 48);
   padding: 0.8em 2.2em 0.8em 1.2em;
   margin: 0 0 0.5rem 0;
   cursor: pointer;
+  justify-content: space-between;
+  display: flex;
+  user-select: none;
   
 }
 .ul-li:hover{
@@ -429,4 +510,71 @@ body{
 }
 .a{
   cursor: pointer;
+}
+@media(max-width:680px){
+  .popcorn{
+    position: relative;
+    text-align: left;
+    top: 2px;
+  }
+}
+@media(max-width: 965px){
+  .vanner{
+    padding: 100px 0;
+  }
+  .p1{
+   font-size: 2rem;
+  }
+  .p2{
+    font-size: 1.125rem;
+   }
+  .tv{
+    display: inline-block;
+  }
+  .left-tv{
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+  .right-tv{
+    width: 100%;
+  }
+  .text-h2{
+    font-size: 2rem;
+  }
+  .text-p{
+    font-size: 1.125rem;
+  }
+  .device{
+    display: table;
+  }
+  .left-device{
+    width: 100%;
+    display: table-footer-group;
+  }
+  .right-device{
+    text-align: center;
+    width: 100%;
+    display: table-header-group;
+  }
+  .kid{
+    display: inline-block;
+  }
+  .left-kid{
+    text-align: center;
+    width: 100%;
+  }
+  .offline{
+    display: table;
+  }
+  .right-offline{
+    display: table-header-group;
+    width: 100%;
+    text-align: center;
+  }
+  .left-offline{
+    display: table-footer-group;
+  }
+
+
 }
