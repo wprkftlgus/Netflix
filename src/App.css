@@ -74,13 +74,14 @@ body{
   width: auto;
 }
 .putBar{
+  display: inline-block;
   background-color: black;
   color: white;
   opacity: 0.8; 
   font-size: 20px;
   font-family: inherit;
   padding: 13px 20px;
-  min-width: 460px;
+  width: 50%;
   align-items: center;
   text-align: left;
   line-height: 1rem;
@@ -192,6 +193,7 @@ body{
   top: 46%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: -1;
 }
 .video{
   width: 100%;
@@ -230,7 +232,7 @@ body{
   }
 }
 .device {
-  margin: 0 2rem;
+  
   max-width: 1100px;
   display: inline-flex;
   align-items: center;
@@ -257,11 +259,11 @@ body{
     overflow: hidden;
     width: 100%;
     height: 100%;
-    max-width: 58%;
+    max-width: 63%;
     max-height: 47%;
     position: absolute;
     top: 34%;
-    left: 44%;
+    left: 50%;
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -480,6 +482,7 @@ body{
   max-width: 1000px;
   margin: 0 auto;
   padding: 3.75rem 0;
+  padding: 0 30px 0 30px;
 }
 .footer-rab{
   min-width: 190px;
@@ -517,10 +520,44 @@ body{
     text-align: left;
     top: 2px;
   }
+
+}
+@media(max-width: 725px){
+  .putBar{
+  background-color: black;
+  width: auto;
+  
+  }
+  .putbarAndButton{
+    width: 100%;
+    max-width: 500px;
+    
+  }
 }
 @media(max-width: 965px){
+  .header{
+    margin: 0 20px;
+  }
   .vanner{
-    padding: 100px 0;
+    padding: 100px 0 30px 0;
+  }
+  .top-content-rab{
+    margin: 0 20px;
+  }
+  .logo{
+    width: 100px;
+    margin-right: auto;
+    margin-left: 0;
+    position: relative;
+  }
+  .text-h2-bottom{
+    font-size: 2rem;
+  }
+  .ul-li{
+    font-size: 1.2rem;
+  }
+  .footer-ul{
+    grid-template-columns: repeat(2,1fr);
   }
   .p1{
    font-size: 2rem;
@@ -576,5 +613,21 @@ body{
     display: table-footer-group;
   }
 
+  @media(max-width: 425px){
+    .footer-ul{
+      grid-template-columns: repeat(1,1fr);
+    }
+  }
 
+  @media(max-width: 675px){
+    .grad{
+      margin: 0 24px;
+    }
+  }
+
+  @media(max-width: 531px){
+    .startButton{
+      margin-top: 10px;
+    }
+  }
 }

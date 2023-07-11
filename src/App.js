@@ -79,7 +79,7 @@ function App() {
       <div className="rab">
       <div className="tv">
        <div className="left-tv">
-        <박스>Enjoy on your TV</박스>
+        <div className="text-h2">Enjoy on your TV</div>
         <p className="text-p">Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
         </div>
         <div className="right-tv">
