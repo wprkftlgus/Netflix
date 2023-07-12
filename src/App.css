@@ -51,7 +51,7 @@ body{
 }
 .mid-content{
   margin: auto;
-  padding: 0 30px 0 30px;
+  
 
 }
 .p1{
@@ -162,7 +162,7 @@ body{
     background-color: rgb(35,35,35);
 }
 .rab {
-  padding: 70px 45px;
+  padding: 70px 0 70px 0;
   text-align: center;
 }
 .tv{
@@ -232,7 +232,7 @@ body{
   }
 }
 .device {
-  
+  margin: 0 2rem;
   max-width: 1100px;
   display: inline-flex;
   align-items: center;
@@ -374,10 +374,9 @@ body{
 }
 .bottom-start{
   max-width: 950px;
-  width: 100%;
   margin: 0 auto;
   text-align: center;
-  padding: 0 0 5rem 0;
+  padding: 0 0 3.5rem 0;
 }
 .text-h2-bottom{
   text-align: center;
@@ -439,7 +438,7 @@ body{
   margin: 2em auto;
   max-width: 815px;
   font-size: 1.5rem;
-  
+  padding: 0 2rem;
 }
 .ul-li-changed{
   background-color: rgb(48, 48, 48);
@@ -482,7 +481,8 @@ body{
   max-width: 1000px;
   margin: 0 auto;
   padding: 3.75rem 0;
-  padding: 0 30px 0 30px;
+  padding: 1.25rem 30px;
+  
 }
 .footer-rab{
   min-width: 190px;
@@ -496,7 +496,7 @@ body{
 .footer-ul{
   list-style: none;
   text-decoration: underline;
-  min-width: 18.375rem;
+  
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   margin-right: 0rem;
@@ -510,6 +510,7 @@ body{
 }
 .footer-li{
   display: inline-block;
+  
 }
 .a{
   cursor: pointer;
@@ -525,7 +526,7 @@ body{
 @media(max-width: 725px){
   .putBar{
   background-color: black;
-  width: auto;
+  width: 50%;
   
   }
   .putbarAndButton{
@@ -625,9 +626,12 @@ body{
     }
   }
 
-  @media(max-width: 531px){
+  @media(max-width: 430px){
     .startButton{
       margin-top: 10px;
+      font-size: 16px;
+      margin-left: 0.5rem;
     }
   }
+ 
 }
