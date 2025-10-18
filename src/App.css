@@ -563,6 +563,12 @@ body{
   .ul-li{
     font-size: 1.2rem;
   }
+  .ul-li-changed{
+    font-size: 1.2rem;
+  }
+  .showHidden{
+    font-size: 1.2rem;
+  }
   .footer-ul{
     grid-template-columns: repeat(2,1fr);
   }
