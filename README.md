@@ -1,5 +1,5 @@
 # 🌐 Live Website
-https://sean-netflix.netlify.app
+[https://sean-netflix.netlify.app](https://netflisclonebysihyeon.netlify.app/)
 
 # 🎬 Netflix Clone (React)
 
