@@ -14,6 +14,7 @@ body{
   margin-right: auto;
   margin-left: 0;
   position: relative;
+  cursor: pointer;
 }
 .top-content {
   background: url("./background.jpg");
@@ -40,10 +41,10 @@ body{
   border-radius: 6px;
   padding: 4px 16px;
   cursor: pointer;
+  transition: 0.2s;
 }
 .login:hover{
-  animation: buttons 0.3s;
-  animation-fill-mode: forwards;
+  background-color: rgb(194, 7, 17);
 }
 
 .content{
@@ -72,6 +73,8 @@ body{
 .putbarAndButton{
   margin: 15px auto ;
   width: auto;
+  align-items: center;
+  display: flex;
 }
 .putBar{
   display: inline-block;
@@ -98,10 +101,10 @@ body{
   text-align: center;
   align-items: center;
   cursor: pointer;
+  transition: 0.1s;
 }
 .startButton:hover{
-  animation: buttons 0.3s;
-  animation-fill-mode: forwards;
+  background-color: rgb(194, 7, 17);
 }
 @keyframes buttons{
   from{
@@ -421,14 +424,6 @@ body{
   display: inline-block;
   max-height: 500px;
 }
-.b{
-  max-height: 500px;
-  transition: All 2s ;
-}
-.c{
-  max-height: 0px;
-  
-}
 .link1{
   color: rgb(255, 255, 255);
   border-radius: 0.125rem;
@@ -514,6 +509,17 @@ body{
 }
 .a{
   cursor: pointer;
+}
+@media(max-width:536px) {
+  .putbarAndButton {
+    display: block;
+  }
+  .putBar {
+    font-size: 15px;
+  }
+  .startButton {
+    margin-top: 2px;
+  }
 }
 @media(max-width:680px){
   .popcorn{

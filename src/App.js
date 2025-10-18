@@ -16,7 +16,14 @@ import boxshot from "./boxshot.png"
 function App() { 
 
   let [modal,setModal] = useState(false);
-  const [show,setShow] = useState(false);
+  const [show,setShow] = useState({
+    whatcan : false,
+    whatis : false,
+    howmuch : false,
+    wherecan : false,
+    howdo: false,
+    isnetflix: false
+  });
 
   let scroll = document.querySelectorAll("#a");
   let a = document.getElementById("a");
@@ -141,23 +148,87 @@ function App() {
      <div className="bottom-rab">
       <h2 className="text-h2-bottom">Frequently Asked Questions</h2>
       <ul className="ul">
-        <li onClick={()=>{setShow(!show)}} className={show ? 'ul-li-changed' : "ul-li"}>What can I watch on Netflix?
-        <span onClick={()=>{setShow(!show)}} className={show ? 'rotate-yes' : 'rotate-no'}>+</span>
+        <li onClick={() => setShow(prev => ({ ...prev, whatcan: !prev.whatcan }))} className={show.whatcan ? 'ul-li-changed' : "ul-li"}>What can I watch on Netflix?
+        <span onClick={() => setShow(prev => ({ ...prev, whatcan: !prev.whatcan }))} className={show.whatcan ? 'rotate-yes' : 'rotate-no'}>+</span>
         </li> 
-         <div onClick={()=>{setShow(!show)}} className={show ? 'b' : "c"}>
-          <p onClick={()=>{setShow(!show)}} className={show ? 'showHidden' : "hide"}>
-          Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.
+         <div>
+          <p  className={show.whatcan ? 'showHidden' : "hide"}>
+          Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. <br />
+          Watch as much as you want, anytime you want.
           <br />
           <br />
           <a className="link1" href="">Check out some of our content</a>
           </p>
          </div>
-        
-        <li className="ul-li">What is Netflix?</li>
-        <li className="ul-li">How much does Netflix cost?</li>
-        <li className="ul-li">Where can I watch?</li>
-        <li className="ul-li">How do I cancel?</li>
-        <li className="ul-li">Is Netflix good for kids?</li>
+
+         <li onClick={()=>{setShow(prev => ({ ...prev, whatis : !prev.whatis}))}} className={show.whatis ? 'ul-li-changed' : "ul-li"}>What is Netflix?
+        <span onClick={()=>{setShow(prev => ({ ...prev, whatis : !prev.whatis}))}} className={show.whatis ? 'rotate-yes' : 'rotate-no'}>+</span>
+        </li> 
+         <div>
+          <p  className={show.whatis ? 'showHidden' : "hide"}>
+          Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more — on thousands of internet-connected devices.<br />
+You can watch as much as you want, whenever you want, without a single commercial – all for one low monthly price.
+          <br />
+          <br />
+          <a className="link1" href="">Check out some of our content</a>
+          </p>
+         </div>
+
+         <li onClick={()=>{setShow(prev => ({ ...prev, howmuch : !prev.howmuch}))}} className={show.howmuch ? 'ul-li-changed' : "ul-li"}>How much does Netflix cost?
+        <span onClick={()=>{setShow(prev => ({ ...prev, howmuch : !prev.howmuch}))}} className={show.howmuch ? 'rotate-yes' : 'rotate-no'}>+</span>
+        </li> 
+         <div>
+          <p  className={show.howmuch ? 'showHidden' : "hide"}>
+          Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device — all for one fixed monthly fee.<br />
+Plans range from basic to premium options. No extra costs, no contracts, and you can cancel anytime.
+          <br />
+          <br />
+          <a className="link1" href="">Check out some of our content</a>
+          </p>
+         </div>
+
+         <li onClick={()=>{setShow(prev => ({ ...prev, wherecan : !prev.wherecan}))}} className={show.wherecan ? 'ul-li-changed' : "ul-li"}>Where can I watch?
+        <span onClick={()=>{setShow(prev => ({ ...prev, wherecan : !prev.wherecan}))}} className={show.wherecan ? 'rotate-yes' : 'rotate-no'}>+</span>
+        </li> 
+         <div>
+          <p  className={show.wherecan ? 'showHidden' : "hide"}>
+          Watch anywhere, anytime.<br />
+Sign in with your Netflix account to instantly stream on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, such as smart TVs, smartphones, tablets, streaming media players, and game consoles.<br />
+You can also download your favorite shows to watch offline on mobile devices.
+          <br />
+          <br />
+          <a className="link1" href="">Check out some of our content</a>
+          </p>
+         </div>
+
+         <li onClick={()=>{setShow(prev => ({ ...prev, howdo : !prev.howdo}))}} className={show.howdo ? 'ul-li-changed' : "ul-li"}>How do I cancel?
+        <span onClick={()=>{setShow(prev => ({ ...prev, howdo : !prev.howdo}))}} className={show.howdo ? 'rotate-yes' : 'rotate-no'}>+</span>
+        </li> 
+         <div>
+          <p  className={show.howdo ? 'showHidden' : "hide"}>
+          Netflix is flexible. <br />
+          There are no annoying contracts and no commitments.<br />
+You can easily cancel your account online in just two clicks.<br />
+There are no cancellation fees – start or stop your membership anytime.
+          <br />
+          <br />
+          <a className="link1" href="">Check out some of our content</a>
+          </p>
+         </div>
+
+         <li onClick={()=>{setShow(prev => ({ ...prev, isnetflix : !prev.isnetflix}))}} className={show.isnetflix ? 'ul-li-changed' : "ul-li"}>Is Netflix good for kids?
+        <span onClick={()=>{setShow(prev => ({ ...prev, isnetflix : !prev.isnetflix}))}} className={show.isnetflix ? 'rotate-yes' : 'rotate-no'}>+</span>
+        </li> 
+         <div>
+          <p  className={show.isnetflix ? 'showHidden' : "hide"}>
+          The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and movies in their own space.<br />
+Kids profiles come with PIN-protected parental controls so you can restrict the maturity rating of content and block specific titles you don’t want your kids to see.
+          <br />
+          <br />
+          <a className="link1" href="">Check out some of our content</a>
+          </p>
+         </div>
+
       </ul>
       <div className="bottom-start">
         <h3>Ready to watch? Enter your email to create or restart your membership.</h3>
