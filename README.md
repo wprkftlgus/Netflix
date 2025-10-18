@@ -1,12 +1,11 @@
-<img width="763" height="856" alt="netflix" src="https://github.com/user-attachments/assets/6731de78-3a42-4df7-90d5-11095d1d367b" />
-
-# 🌐 Live Website
-[https://sean-netflix.netlify.app](https://netflisclonebysihyeon.netlify.app/)
-
 # 🎬 Netflix Clone (React)
 
 This project is a Netflix clone website built with React.
 It mimics the design and behavior of Netflix, featuring an interactive UI and responsive web design that adapts to all screen sizes.
+<img width="763" height="856" alt="netflix" src="https://github.com/user-attachments/assets/6731de78-3a42-4df7-90d5-11095d1d367b" />
+
+# 🌐 Live Website
+[https://sean-netflix.netlify.app](https://netflisclonebysihyeon.netlify.app/)
 
 # 🚀 Main Features
 
